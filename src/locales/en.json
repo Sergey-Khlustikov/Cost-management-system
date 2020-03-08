@@ -1,0 +1,92 @@
+{
+  "routes": {
+    "dashboard": "Dashboard",
+    "history": "History",
+    "planning": "Planning",
+    "newPost": "New post",
+    "categories": "Categories",
+    "profile": "Profile",
+    "login": "Login",
+    "registration": "Sign Up",
+    "pageNotFound": "Page not found",
+    "detail": "Detail"
+  },
+  "home": {
+    "bill": "Bill",
+    "curBill": "Currency bill",
+    "exchangeRates": "Exchange rates to Euro",
+    "rate": "Rate"
+  },
+  "404": {
+    "title": "Oops! This Page Could Not Be Found",
+    "text": "Sorry but the page you are looking for does not exist, have been removed. name changed or is temporarily unavailable"
+  },
+  "buttons": {
+    "signIn": "Sign in",
+    "signUp": "Sign up",
+    "create": "Create",
+    "update": "Update",
+    "toHome": "Go To Homepage"
+  },
+  "links": {
+    "signUp": "Sign up!",
+    "signIn": "Sign in!",
+    "logOut": "Log out"
+  },
+  "forms": {
+    "email": "E-mail",
+    "password": "Password",
+    "name": "Name",
+    "privacy": "Agree with processing of my personal data",
+    "chooseCat": "Select the category",
+    "chooseCurs": "Select the currencies to track",
+    "chooseBaseCur": "Select base currency"
+  },
+  "validationErrors": {
+    "emailInc": "Email is incorrect",
+    "emailReq": "Email field should not be empty",
+    "passMinL": "Password must be at least {minL} characters. Now is {l}",
+    "passReq": "Password is required",
+    "minV": "The amount must be at least {minV}",
+    "nameReq": "Name field is required",
+    "valReq": "Enter value",
+    "descReq": "Enter description",
+    "catNameReq": "The category title is required."
+  },
+  "common": {
+    "currency": "Currency | Currencies",
+    "bookkeeping": "Bookkeeping",
+    "noAcc": "No account?",
+    "haveAcc": "Have an account?",
+    "date": "Date",
+    "amount": "Amount",
+    "category": "Category",
+    "type": "Type",
+    "income": "Income",
+    "outcome": "Outcome",
+    "post": "Post",
+    "noPosts": "You have no posts yet",
+    "postNotFound": "Post not found",
+    "description": "Description",
+    "createCatsFirst": "First you need to create categories.",
+    "create": "Create",
+    "of": "of",
+    "title": "Title",
+    "limit": "Limit",
+    "edit": "Editing",
+    "sorting": "Sorting"
+  },
+  "tooltip": {
+    "openPost": "Open post",
+    "excess": "Excess of",
+    "moneyLeft": "Left",
+    "newPost": "New post"
+  },
+  "alert": {
+    "postCreated": "The post is created successfully",
+    "catUpdated": "The category is updated successfully",
+    "profileUpdated": "The profile is updated successfully",
+    "onLogout": "You are logged out",
+    "needAuth": "You need to sign in to view this page"
+  }
+}
