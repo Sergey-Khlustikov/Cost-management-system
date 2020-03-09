@@ -5,11 +5,17 @@
       href="#"
       data-target="lang-opt"
     >
-      <img :src="`${publicPath}img/${$i18n.locale}.svg`">
+      <img :src="`${publicPath}img/${$i18n.locale}.svg`" :alt="$i18n.locale">
     </a>
 
     <ul id='lang-opt' class='dropdown-content lang-opt'>
-      <li v-for="lang of langs" :key="lang.slug" @click="changeLocale(lang.slug)"><img :src="publicPath + lang.imgUrl"></li>
+      <li
+        v-for="lang of langs"
+        :key="lang.locale"
+        @click="changeLocale(lang.locale)"
+      >
+        <img :src="publicPath + lang.imgPath" :alt="lang.locale">
+      </li>
     </ul>
   </li>
 </template>
@@ -23,14 +29,12 @@ export default {
       dropdown: null,
       langs: [
         {
-          slug: 'ru',
-          title: 'Русский',
-          imgUrl: 'img/ru.svg'
+          locale: 'ru',
+          imgPath: 'img/ru.svg'
         },
         {
-          slug: 'en',
-          title: 'English',
-          imgUrl: 'img/en.svg'
+          locale: 'en',
+          imgPath: 'img/en.svg'
         }
       ]
     }

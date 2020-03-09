@@ -21,6 +21,7 @@
 <script>
 import Navbar from '@/components/app/Navbar'
 import Sidebar from '@/components/app/Sidebar'
+import messages from '@/utils/messages'
 export default {
   name: 'MainLayout',
   components: {
@@ -30,6 +31,16 @@ export default {
     sidebarIsOpen: true,
     loading: true
   }),
+  computed: {
+    error () {
+      return this.$store.getters.error
+    }
+  },
+  watch: {
+    error (fbErr) {
+      this.$error(messages[fbErr.code] || this.$t('common.smthWrong'))
+    }
+  },
   async mounted () {
     if (!this.$store.getters['user/user']) {
       await this.$store.dispatch('user/fetchUser')

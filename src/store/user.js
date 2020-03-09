@@ -1,6 +1,6 @@
 import firebase from 'firebase/app'
 import router from '@/router'
-import i18n from '../i18n'
+import i18n from '@/i18n'
 export default {
   namespaced: true,
   state: {
@@ -9,9 +9,6 @@ export default {
   getters: {
     user (state) {
       return state.user
-    },
-    currencies (state) {
-      return state.currencies
     }
   },
   mutations: {

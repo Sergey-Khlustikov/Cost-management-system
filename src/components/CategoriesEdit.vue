@@ -6,7 +6,7 @@
 
     <form @submit.prevent="submitHandler">
       <div class="input-field">
-        <select ref="select" v-model="currentCat">
+        <select id="select__editCategory" ref="select" v-model="currentCat">
           <option
             v-for="cat of categories"
             :value="cat.id"
@@ -15,7 +15,7 @@
             {{ cat.title }}
           </option>
         </select>
-        <label>{{ $t('forms.chooseCat') }}</label>
+        <label for="select__editCategory">{{ $t('forms.chooseCat') }}</label>
       </div>
 
       <div class="input-field">
@@ -138,7 +138,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-
-</style>

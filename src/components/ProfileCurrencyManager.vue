@@ -2,7 +2,7 @@
   <div class="currency-wrapper">
     <div>
       <div class="input-field">
-        <select ref="selectAll" multiple v-model="currenciesTrackedLocal" @change="trackedHandler">
+        <select id="select__curTracked" ref="selectAll" multiple v-model="currenciesTrackedLocal" @change="trackedHandler">
           <option
             v-for="(value, key) of currenciesAll"
             :value="key"
@@ -11,10 +11,10 @@
             {{ key }}
           </option>
         </select>
-        <label>{{ $t('forms.chooseCurs') }}</label>
+        <label for="select__curTracked">{{ $t('forms.chooseCurs') }}</label>
       </div>
       <div class="input-field">
-        <select ref="selectBase" :value="currency" @change="baseHandler($event)">
+        <select id="select__baseCur" ref="selectBase" :value="currency" @change="baseHandler($event)">
           <option
             v-for="cur of currenciesTrackedLocal"
             :value="cur"
@@ -23,7 +23,7 @@
             {{ cur }}
           </option>
         </select>
-        <label>{{ $t('forms.chooseBaseCur') }}</label>
+        <label for="select__baseCur">{{ $t('forms.chooseBaseCur') }}</label>
       </div>
     </div>
     <div>

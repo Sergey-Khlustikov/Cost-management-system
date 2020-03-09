@@ -74,7 +74,9 @@
     "title": "Title",
     "limit": "Limit",
     "edit": "Editing",
-    "sorting": "Sorting"
+    "sorting": "Sorting",
+    "error": "Error",
+    "smthWrong": "Something is wrong"
   },
   "tooltip": {
     "openPost": "Open post",
@@ -87,6 +89,12 @@
     "catUpdated": "The category is updated successfully",
     "profileUpdated": "The profile is updated successfully",
     "onLogout": "You are logged out",
-    "needAuth": "You need to sign in to view this page"
+    "needAuth": "You need to sign in to view this page",
+    "tooManyRequests": "Too many unsuccessful login attempts. Try later",
+    "invalidPassword": "Invalid password",
+    "emailExists": "A user with this email already exists",
+    "emailNotFound": "A user with this email does not exist",
+    "categoryCreated": "Category is created",
+    "amountExceeds": "Amount exceeds balance. You have {amount}"
   }
 }

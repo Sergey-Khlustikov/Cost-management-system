@@ -18,12 +18,8 @@ export default {
   },
   watch: {
     error (fbErr) {
-      this.$error(messages[fbErr.code] || 'Что-то пошло не так')
+      this.$error(messages[fbErr.code] || this.$t('common.smthWrong'))
     }
   }
 }
 </script>
-
-<style scoped>
-
-</style>

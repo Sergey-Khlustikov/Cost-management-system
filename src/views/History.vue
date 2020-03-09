@@ -9,7 +9,7 @@
     <p v-else-if="!items" class="center">{{ $t('common.noPosts') }}</p>
 
     <section v-else>
-      <div class="history-chart" key="chart">
+      <div class="history-chart">
         <canvas ref="canvas"/>
       </div>
       <transition name="fade" mode="out-in">
@@ -70,8 +70,9 @@ export default {
           typeClass: post.type === 'income' ? 'green' : 'red',
           typeText: post.type === 'income' ? this.$t('common.income') : this.$t('common.outcome')
         }
-      })
+      }).reverse()
       this.setupPagination(posts)
+
       if (this.items) {
         this.renderChart({
           labels: categories.map(c => [c.title]),

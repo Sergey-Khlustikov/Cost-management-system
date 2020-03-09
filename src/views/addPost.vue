@@ -11,7 +11,7 @@
       <transition name="fade" mode="out-in">
         <div>
           <div class="input-field" >
-            <select ref="select" v-model="currentCat">
+            <select id="select__currentCat" ref="select" v-model="currentCat">
               <option
                 v-for="cat of categories"
                 :value="cat.id"
@@ -20,7 +20,7 @@
                 {{ cat.title }}
               </option>
             </select>
-            <label>{{ $t('forms.chooseCat') }}</label>
+            <label for="select__currentCat">{{ $t('forms.chooseCat') }}</label>
           </div>
 
           <p>
@@ -109,11 +109,9 @@ export default {
   computed: {
     ...mapGetters({
       user: 'user/user',
-      posts: 'posts/posts'
+      posts: 'posts/posts',
+      categories: 'categories/categories'
     }),
-    categories () {
-      return this.$store.getters['categories/categories']
-    },
     isSumValid () {
       return this.$v.sum.$error
     },
@@ -152,13 +150,16 @@ export default {
             : this.user.bill - this.sum
 
           await this.updateUser({ bill })
-          this.$alert(this.$t('alert.postCreated'))
+          this.$alert('alert.postCreated')
           this.$v.$reset()
           this.sum = 1
           this.desc = ''
         } catch (e) {}
       } else {
-        this.$alert(`Сумма превышает баланс. Сейчас на счету ${this.user.bill}`)
+        this.$alert(this.$t(
+          'alert.amountExceeds',
+          { amount: this.$options.filters.currencyFilter(this.user.bill) }
+        ))
       }
     }
   },
@@ -184,7 +185,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-
-</style>

@@ -70,7 +70,7 @@ export default {
         })
         this.title = ''
         this.limit = 100
-        this.$alert('Категория создана')
+        this.$alert(this.$t('alert.categoryCreated'))
         this.$v.reset()
       } catch (e) {}
     }
@@ -85,7 +85,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-
-</style>

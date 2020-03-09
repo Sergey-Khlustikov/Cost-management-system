@@ -24,7 +24,6 @@ export default new Vuex.Store({
       state.error = null
     }
   },
-  actions: {},
   modules: {
     user, categories, posts, currencies
   }
