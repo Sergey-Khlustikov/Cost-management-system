@@ -1,12 +1,10 @@
-import firebase from 'firebase'
+import firebase from 'firebase/app'
 import { filterObjectByArray } from '@/utils/helpers'
 
 export default {
   state: {
     apiKey: process.env.VUE_APP_CURRENCY
   },
-  getters: {},
-  mutations: {},
   actions: {
     async fetchCurrency ({ state, dispatch }) {
       const uid = await dispatch('user/getUid')
